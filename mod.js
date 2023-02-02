@@ -1,9 +1,19 @@
-/*! <package name>. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
+/*! itty-compressor. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
-/*
-  1. Search & replace <package name>
-  2. Replace desc in package.json
-  3. Add keywords in package.json
-  4. Update README.md
-  5. start hacking
-*/
+/** @typedef {'gzip' | 'deflate' | 'deflate-raw'} SupportedFormats */
+
+/**
+ * @param {*} body
+ * @param {SupportedFormats} [format]
+ */
+export var compress = (body, format = 'gzip') => new Response(
+  new Response(body == null ? '' : body).body
+    .pipeThrough(new CompressionStream(format)))
+
+/**
+ * @param {*} body
+ * @param {SupportedFormats} [format]
+ */
+export var decompress = (body, format = 'gzip') => new Response(
+  new Response(body == null ? '' : body).body
+    .pipeThrough(new DecompressionStream(format)))

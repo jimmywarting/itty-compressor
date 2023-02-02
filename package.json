@@ -1,7 +1,7 @@
 {
-  "name": "<package name>",
-  "version": "1.0.0",
-  "description": "<package desc>",
+  "name": "itty-compressor",
+  "version": "1.0.1",
+  "description": "A tiny (de)compressor using CompressionStream and DecompressionStream (with Response)",
   "main": "mod.js",
   "type": "module",
   "scripts": {
@@ -9,21 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimmywarting/<package name>.git"
+    "url": "git+https://github.com/jimmywarting/itty-compressor.git"
   },
   "keywords": [
-    "key",
-    "words"
+    "compression",
+    "decompression",
+    "tiny",
+    "dependent-free"
   ],
   "author": "Jimmy Wärting <jimmy@warting.se> (https://jimmy.warting.se/opensource)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jimmywarting/<package name>/issues"
+    "url": "https://github.com/jimmywarting/itty-compressor/issues"
   },
   "engines": {
-    "node": ">=14.16"
+    "node": ">=18"
   },
-  "homepage": "https://github.com/jimmywarting/<package name>#readme",
+  "homepage": "https://github.com/jimmywarting/itty-compressor#readme",
   "funding": [
     {
       "type": "github",
